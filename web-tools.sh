@@ -28,4 +28,5 @@ echo -e "${GREEN} [+] Instalando herramientas disponibles en repositorio ${RESET
 sudo apt-get update
 sudo apt-get install geany 
 sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -o /opt/jython-standalone-2.7.2.jar
+sudo cp -r payloads /opt
 
