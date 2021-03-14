@@ -26,12 +26,6 @@ RESET="\033[00m"       # Normal
 
 echo -e "${GREEN} [+] Instalando herramientas disponibles en repositorio ${RESET}" 
 sudo apt-get update
-sudo apt install npm
+sudo apt-get install geany 
+sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -o /opt/jython-standalone-2.7.2.jar
 
-echo -e "${GREEN} [+] Instalando herramientas NPM ${RESET}" 
-sudo npm install -g snyk
-
-
-
-cd /home/kali/web-security/5-OWASP-TOP-10/A9/backend-master
-npm install
