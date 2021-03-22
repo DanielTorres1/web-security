@@ -1,0 +1,164 @@
+{
+   "puerto":"[puerto en que se ejecutar el server backend. Valor por defecto 5600]",
+   "usuario_admin":{
+      "usuario":"[nombre del usuario superadmin / max 40]",
+      "contrasenia":"[constraseña del usuario superadmin / max 40]",
+      'api':"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw"
+      "correo_electronico":"[correo_electronico / max 200]",
+      "telefonos":"[lista de teléfonos separados por comas / max 80]",
+      "persona":{
+         "nombres":"[nombres / max 255]",
+         "paterno":"[apellido paterno / max 150]",
+         "materno":"[apellido materno / max 150]",
+         "tipo_documento":"[CI o PASAPORTE]",
+         "nro_documento":"[El nro documento / max 20]",
+         "complemento":"[Complemento del nro documentos (opcional) / max 2]",
+         "lugar_expedicion":"[El nombre del departamento  / max 12]",
+         "nacionalidad":"[nombre de pais de nacimiento / max 30]",
+         "genero":"[F o M (F= femenido , M = masculino)]",
+         "fecha_nacimiento":"[fecha de nacimiento en formato  YYYY-MM-DD Eje. 1984-02-26]"
+      },
+      "oficina_central":{
+         "avenida_calle":"[nombre de la avenida o calle]",
+         "avenida_calle_referencia":"[nombre calle de referencia]",
+         "numero":"[numero de la oficina central]",
+         "zona":"[zona]",
+         "edificio":"[edificio]",
+         "piso":"[piso]",
+         "tipo":"[tipo CENTRAL o REGIONAL]",
+         "departamento":"[departamento]",
+         "municipio":"[municipio]",
+         "provincia":"[provincia]",
+         "telefonos":"[telefono(s) separados por coma]",
+         "correos":"[correo(s) separado por comas]",
+         "latitud":"[latitud, por defecto -16.492735]",
+         "longitud":"[llongitud, por defecto -68.133264]"
+      }
+   },
+   "autenticacion":{
+      "clave_secreta_jwt":"[Cualquier texto para generar llaves para JWT / max 20]",
+      "tiempo_expiracion_jwt":"[El tiempo de expiracion del token jwt. Default 24h  ( 24 horas) Ejemplos 30m (30 minitos), 24h (24 horas)]",
+      "llave_activacion_cuenta":"[Cualquier texto para el firmado de texto en la creacion de usuarios / max 10]"
+   },
+   "cache":{
+      "segundos_cache":"30d"
+   },
+   "administracion_memoria":{
+      "tiempo_gc":"15m"
+   },
+   "directorios":{
+      "ruta_documentos":"[ruta absoluta para pdf de ROE Ejemplo /home/usuario/ovt/roes/]",
+      "ruta_ddjj_docs_extras":"[ruta absoluta documentos extra de retroactivo Ejemplo /home/usuario/ovt/ddjj_planilas/]",
+      "ruta_documentos_planillas":"[ruta absoluta para pdf de ddjj planilals Ejemplo /home/usuario/ovt/ddjj_planilas/]",
+      "ruta_documentos_noticias":"[ruta absoluta para los documentos de las noticias Ejemplo /home/usuario/ovt/noticias/]",
+      "ruta_cache":"/tmp/cache",
+      "ruta_extractos": "[ruta absoluta para los documentos de las noticias Ejemplo /home/usuario/ovt/extractos/]"
+   },
+   "correo":{
+      "origen":"[correo electronico]",
+      "host":"[smtp_server]",
+      "port":"[port]",
+      "secure":false,
+      "ignoreTLS":false,
+      "auth":{
+         "user":"[user_correo_electronico]",
+         "pass":"[contraseña de correo electronico]"
+      },
+      "tls":{
+         "rejectUnauthorized":false
+      }
+   },
+   "ignorar_segip_planillas": false,
+   "nits_planillas":[
+      "[lista de nits separados por comas / max 80]"
+   ],
+   "nits_piloto":[
+      "[lista de nits separados por comas / max 80]"
+   ],
+   "bloquear_sincronizados": false,
+   "habilitar_sincronizacion_ovt": false,
+   "host":{
+      "host_activar_cuenta":"[host_frontend/ovt/#/loginRoe/     Ejemplo. http://dominio_front/ovt/#/loginRoe]",
+      "host_correo_cambiar":"[host_frontend/ovt/#/actualizar_correo/   Ejemplo. http://dominio_front/ovt/#/actualizar_correo/]",
+      "host_activar_cuenta_mintrabajo":"[host_frontend/ovt/#/activar_min/ Ejemplo: http://dominio_front/ovt/#/activar_min/]",
+      "host_documentos":"[host_backend/report Ejemplo: http://dominio_backend/report/]/",
+      "host_archivos_publicos":"[host_backend/report Ejemplo: http://dominio_backend/public/]/",
+      "host_actual":"[host_backend/report Ejemplo: http://localhost:5600/]"
+   },
+   "servicios_externos":{
+      "pcd": {
+        "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJoWVZxWDFSS1o5M3FFRUFhckRpOTdtcFdlZGJKbHlCMCIsInVzZXIiOiJqY2FsaXpheWEtYWdldGljIiwiZXhwIjoxNjA3MzUwMzIwfQ.yLtvDL4b9VLR_M3HrX9yXIx9k_CSHkBaKDkIT_Ntu1w",
+        "url_status": "https://test.agetic.gob.bo/kong/fake/unidadDiscapacidad/v1/estado",
+        "url": "https://test.agetic.gob.bo/kong/fake/unidadDiscapacidad/v1/certificadoDiscapacidad/",
+        "timeout": 10000
+      },
+      "SIPRUNPCD": {
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZF91c3VhcmlvIjozLCJ1c3VhcmlvIjoic2VydmljaW8iLCJpZF9yb2wiOjUsImlkX3BlcnNvbmEiOjEsInZlbmNpbWllbnRvIjoiMjAxNy0xMi0yOFQyMTowODo1Ni45MTZaIn0.6I2tkplMutXFtcEin6B1W1EG6lX98j_4CKRVPLC3MOo",
+        "url": "https://test.agetic.gob.bo/centralizadorpcd-api/api/v1/pcd",
+        "timeout": 10000
+      },
+      "ibc": {
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImZlY2hhXCI6XCIyMDE4LTEyLTA3VDE1OjEwOjMwLjY2NVpcIixcImRpblwiOjB9Ig.erU9DC4MM4w4gj0LE63SuR6nzXWoaKhi5wysev5yByE",
+        "url": "https://test.agetic.gob.bo/wsibc/api/v1/ibc/",
+        "timeout": 10000
+      },
+      "segip":{
+         "jwt":"[JWT para servicio web de SEGIP]",
+         "url_status":"[segip_url_de_interoperabilidad_status]/",
+         "url":"[segip_url_de_interoperabilidad_url]/",
+         "urlContrastar": "[segip_contrastacion_url_de_interoperabilidad_url]/"
+      },
+      "banco_union":{
+         "jwt":"[JWT para servicio web de BANCO UNION]",
+         "url_status":"[sin_url_de_interoperabilidad]/",
+         "url":"[sin_url_de_interoperabilidad]/"
+      },
+      "sin":{
+         "jwt":"[JWT para servicio web de IMPUESTOS]",
+         "url_status":"[sin_url_de_interoperabilidad]/",
+         "url":"[sin_url_de_interoperabilidad]/"
+      },
+      "funda_empresa":{
+         "jwt":"[JWT para servicio web de FUNDEMPRESA]",
+         "url_status":"[funda_empresa_url_de_interoperabilidad]/",
+         "servicios":{
+            "obtener_matriculas":"[funda_empresa_url_de_interoperabilidad_obtener_matriculas]/",
+            "info_matricula":"[funda_empresa_url_de_interoperabilidad_info_matricula]/",
+            "buscar_representante":"[funda_empresa_url_de_interoperabilidad_buscar_representante]"
+         }
+      },
+      "min_trabajo": {
+        "jwt": "[JWT para el servicio web de MIN_TRABAJO]",
+        "servicios":{
+          "buscar_empresa": "[min_trabajo_url_de_interoperabilidad_obtener_fecha_inicio_actividades ejemplo <IP>/min_backup/backup?nit={nit}]"
+        }
+      },
+      "sincronizar_depositos" : {
+        "sincronizar": "http://localhost:8080/busa/api/v1/depositos",
+        "consultar": "http://localhost:8080/busa/api/v1/depositos/"
+      }
+   },
+   "firma_digital": {
+    "pin": "12345678",
+    "url_firmador": "https://localhost:4637/sign",
+    "certificado_pem":
+      {  "unidadOrganizacionalSubject":"Jefatura Departamental de Trabajo La Paz",
+          "numeroSerie":"71f12286fcb12edd",
+          "finValidez":"03/10/2018",
+          "nombreComunIssuer":"Entidad Certificadora Publica ADSIB",
+          "organizacionIssuer":"ADSIB",
+          "nombreComunSubject":"[Nombre de la persona]",
+          "inicioValidez":"03/10/2017",
+          "unidadOrganizacionalIssuer":null,
+          "organizacionSubject":"Ministerio de Trabajo Empleo y Prevision Social"
+      },
+    "roes": {
+      "limite": 8000,
+      "paginado": 10
+    },
+    "planillas": {
+      "limite": 8000,
+      "paginado": 10      
+    }
+   }
+}

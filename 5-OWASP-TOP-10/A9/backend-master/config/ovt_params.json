@@ -1,0 +1,109 @@
+{
+    "valor_inicial_nro_orden_ddjj": 1,
+    "importacion_con_validar_segip": true,
+    "validar_depositos_fecha_maximo": "February 1",
+    "validar_depositos_fecha_minimo": "January 1",
+    "nro_dias_para_multa_roe": 180,
+    "timeout_importacion": "30m",
+    "edad_menor_edad": 18,
+    "edad_permitida_trabajar": 14,
+    "minimo_horas_menor_edad": 6,
+    "limite_devolucion_deposito": 50,
+    "fecha_nacimiento_inicial": "01/01/1907",
+    "duracion_verificacion_segip_anios": 2,
+    "anio_minimo_fecha_inicio_actividades": 1492,
+    "planillas": {
+        "tamano_maximo_mb": 3,
+        "nro_dias_nua_cua_requerido": 30,
+        "OVTDJ-T00": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 0,
+                "costo_mayor_a_100K": 0
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-T01": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 70,
+                "costo_mayor_a_100K": 135
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-T02": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 23,
+                "costo_mayor_a_100K": 45
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-P01": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 75,
+                "costo_mayor_a_100K": 140
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-R01": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 105,
+                "costo_mayor_a_100K": 130
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-A01": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 65,
+                "costo_mayor_a_100K": 140
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "OVTDJ-A02": {
+            "costo_declaracion": {
+                "monto_base": 100000,
+                "costo_menor_a_100K": 65,
+                "costo_mayor_a_100K": 140
+            },
+            "diasParaPagarDDJJ": 30
+        },
+        "rectificacion": {},
+        "retraso": {
+            "maxi_dias_validos_reactivacion": 50
+        }
+    },
+    "roe": {
+        "inscripcion": {
+            "codigo_tramite": "INS-ROE",
+            "costo_inscripcion": 0
+        },
+        "actualizacion": {
+            "codigo_tramite": "ACT-ROE",
+            "costo_actualizacion": 95,
+            "tiempo_actualizacion_en_meses": 6
+        }
+    },
+    "restriccion_intentos": {
+        "BANCO_UNION": {
+            "nro_intentos": 5,
+            "tiempo_habilitacion": "2m"
+        },
+        "IMPUESTOS": {
+            "nro_intentos": 3,
+            "tiempo_habilitacion": "1m"
+        },
+        "FUNDEMPRESA": {
+            "nro_intentos": 100,
+            "tiempo_habilitacion": "24h"
+        },
+        "SEGIP": {
+            "nro_intentos": 15,
+            "tiempo_habilitacion": "15m"
+        }
+    },
+    "usuario": "admin"
+}

@@ -1,0 +1,18 @@
+{
+    "username": "[postgres]",
+    "password": "[password]",
+    "database": "[database]",
+    "host": "[host]",
+    "dialect": "[postgres]",
+
+    "migrationStorage": "sequelize",
+    "migrationStorageTableName": "sequelize_migration",
+
+    "seederStorage": "sequelize",
+    "seederStorageTableName": "sequelize_seeders",
+    "pool": {
+        "max": 15,
+        "min": 0,
+        "idle": 10000
+    }
+}

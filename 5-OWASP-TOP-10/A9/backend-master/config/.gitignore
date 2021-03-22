@@ -1,0 +1,10 @@
+node_modules
+dist
+.tmp
+*.architect~
+nbproject
+npm-debug.log
+public
+.idea
+config/data_base.json
+config/app.json

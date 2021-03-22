@@ -26,7 +26,7 @@ RESET="\033[00m"       # Normal
 
 echo -e "${GREEN} [+] Instalando herramientas disponibles en repositorio ${RESET}" 
 sudo apt-get update
-sudo apt-get install -y geany python3-pip synaptic golang-go libreoffice-calc
+sudo apt-get install -y geany python3-pip synaptic golang-go libreoffice-calc dotdotpwn
 
 
 echo -e "${GREEN} [+] Instalando WEBHACKS ${RESET}" 
@@ -50,7 +50,20 @@ sudo mv dalfox /usr/bin
 cd ..
 
 
+#git clone https://github.com/szski/shapeshifter
+#cd shapeshifter
 
-#sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -o /opt/jython-standalone-2.7.2.jar
+git clone https://github.com/securing/DumpsterDiver
+cd DumpsterDiver
+pip3 install -r requirements.txt
+cd ..
+
+sudo mv DumpsterDiver /opt 
+sudo cp DumpsterDiver.sh /usr/bin/DumpsterDiver.sh  
+sudo chmod a+x /usr/bin/DumpsterDiver.sh
+
+
+sudo wget https://raw.githubusercontent.com/dolevf/nmap-graphql-introspection-nse/6594cce7b590a7194641494ed33c018d9ecd6b89/graphql-introspection.nse -O /usr/share/nmap/scripts/graphql-introspection.nse
+sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -O /opt/jython-standalone-2.7.2.jar
 
 #sudo apt-get -y install bc nbtscan nfs-common snmp finger sqlite3 sqlitebrowser python-pip nmap masscan onesixtyone whatweb libssl-dev ike-scan postgresql-client elinks smbclient bc libcurl4-openssl-dev xterm ipmitool lbd exiftool libpq-dev libpcap-dev tshark p7zip-full default-mysql-client python3-pip libssl-dev swig python3-dev gcc libcrypt-ssleay-perl metasploit-framework patator hydra enum4linux wpscan dnsutils python3-setuptools libreoffice-calc
